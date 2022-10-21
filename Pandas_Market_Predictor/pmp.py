@@ -72,6 +72,16 @@ class Pandas_Market_Predictor :
     return STOP_LOSS
     
     
+  def Take_Profit_CALCULATOR(self,Trend,S,R,Trade_Efficiency_Factor):
+    
+    DEVIATION = R - S
+    if Trend == "UP" :
+      TAKE_PROFIT = S + (DEVIATION * Trade_Efficiency_Factor)
+    if Trend == "DOWN" :
+      TAKE_PROFIT = R - (DEVIATION * Trade_Efficiency_Factor)
+    
+    return TAKE_PROFIT
+    
       
 
 
@@ -92,3 +102,11 @@ if __name__ == "__main__" :
   Stop_Loss_Down = MyMarketPredictor.STOP_LOSS_CALCULATOR("DOWN",Level['Support'],Level['Resistance'],RISK_REWARD_RATIO ) # For Up Down
   print("The Stop Loss Level for up Trend is", Stop_Loss_Up , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
   print("The Stop Loss Level for down Trend is", Stop_Loss_Down , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
+
+  Trade_Efficiency_Factor = 9/10
+  Take_Profit_Up = Take_Profit_CALCULATOR("UP",S,R,Trade_Efficiency_Factor)
+  Take_Profit_Down = Take_Profit_CALCULATOR("UP",S,R,Trade_Efficiency_Factor)
+  print("The Take Profit Level for up Trend is", Take_Profit_Up , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
+  print("The Take Profit Level for down Trend is", Take_Profit_Down , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
+      
+
