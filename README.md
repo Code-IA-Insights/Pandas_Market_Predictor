@@ -70,3 +70,12 @@ if __name__ == "__main__" :
   
 ````
 
+Result :
+
+```console
+foo@bar:~$ python test.py
+Buy Trend : 0
+Sell Trend : 0
+
+```
+
