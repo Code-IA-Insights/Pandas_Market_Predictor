@@ -146,3 +146,8 @@ The Stop Loss Level for down Trend is 147.7088775041822 for 0.3333333333333333 R
   print("The Take Profit Level for up Trend is", Take_Profit_Up , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
   print("The Take Profit Level for down Trend is", Take_Profit_Down , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
 ````
+
+```console
+The Take Profit Level for up Trend is 147.06701489093487 for 0.6666666666666667 Trade_Efficiency_Factor
+The Take Profit Level for down Trend is 147.06701489093487 for 0.6666666666666667 Trade_Efficiency_Factor
+```
