@@ -23,7 +23,7 @@ The core data structures of Pandas Market Predictor are __Historical Market Data
 
 A sample Data Set should be :
 
-| open | high | low | close  | volume | Indicator1 | Indicator2 |
+| Open | High | Low | Close  | Volume | Indicator1 | Indicator2 |
 |-----:|------:|----:|-----:|-------:|-----------:|-----------:|
 |0.93767|0.93791|0.93618|0.9363|69414.0|0.9363860952540013|0.9365316260340849|
 |0.9363|0.93764|0.93566|0.93666|23461.0|0.936477396836001|0.9365549667551604|
