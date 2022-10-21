@@ -87,5 +87,7 @@ if __name__ == "__main__" :
   print("Support Level :",Level['Support'])
   print("Resistance Level :",Level['Resistance'])
   RISK_REWARD_RATIO = 1 / 3
-  Stop_Loss = MyMarketPredictor.STOP_LOSS_CALCULATOR("UP",Level['Support'],Level['Resistance'],RISK_REWARD_RATIO )
-  print("The Stop Loss Level is", Stop_Loss, "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
+  Stop_Loss_Up = MyMarketPredictor.STOP_LOSS_CALCULATOR("UP",Level['Support'],Level['Resistance'],RISK_REWARD_RATIO ) # For Up Trend
+  Stop_Loss_Down = MyMarketPredictor.STOP_LOSS_CALCULATOR("DOWN",Level['Support'],Level['Resistance'],RISK_REWARD_RATIO ) # For Up Down
+  print("The Stop Loss Level for up Trend is", Stop_Loss_Up , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
+  print("The Stop Loss Level for down Trend is", Stop_Loss_Down , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
