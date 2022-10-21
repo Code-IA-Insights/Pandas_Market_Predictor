@@ -61,13 +61,13 @@ class Pandas_Market_Predictor :
     }
   
   
-  def STOP_LOSS_CALCULATOR(Trend,Support,Resistance,RISK_REWARD_RATIO):
+  def STOP_LOSS_CALCULATOR(self,Trend,S,R,RISK_REWARD_RATIO):
     
-    DEVIATION = Resistance - Support
+    DEVIATION = R - S
     if Trend == "UP" :
-      STOP_LOSS = Resistance - (DEVIATION * RISK_REWARD_RATIO)
+      STOP_LOSS = R - (DEVIATION * RISK_REWARD_RATIO)
     if Trend == "DOWN" :
-      STOP_LOSS = Support + (DEVIATION * RISK_REWARD_RATIO)
+      STOP_LOSS = S + (DEVIATION * RISK_REWARD_RATIO)
     
     return STOP_LOSS
     
@@ -86,6 +86,7 @@ if __name__ == "__main__" :
   Level = MyMarketPredictor.Support_Resistance_Estimation_Tool(["Indicator1","Indicator2"])
   print("Support Level :",Level['Support'])
   print("Resistance Level :",Level['Resistance'])
+  
   RISK_REWARD_RATIO = 1 / 3
   Stop_Loss_Up = MyMarketPredictor.STOP_LOSS_CALCULATOR("UP",Level['Support'],Level['Resistance'],RISK_REWARD_RATIO ) # For Up Trend
   Stop_Loss_Down = MyMarketPredictor.STOP_LOSS_CALCULATOR("DOWN",Level['Support'],Level['Resistance'],RISK_REWARD_RATIO ) # For Up Down
