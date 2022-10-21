@@ -6,6 +6,8 @@ setup(
     install_requires=[
         'numpy',
         'pandas',
+        'Awesome_Linear_Regression',
+        'Artificial_Neural_Network_Classifier',
         'importlib-metadata; python_version == "3.8"',
     ],
 )
