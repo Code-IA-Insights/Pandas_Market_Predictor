@@ -42,4 +42,29 @@ pip install Pandas-Market-Predictor
 
 ### I.Trend Detection
 
+````python
+
+from Pandas_Market_Predictor import Pandas_Market_Predictor
+import pandas as pd
+
+
+if __name__ == "__main__" :
+  
+  # Firt we read the specified data using pandas
+  
+  df = pd.read_csv('dataset.csv')
+  df = df.dropna(axis=0) # Data cleaning
+  
+  # Create predictor
+  
+  MyMarketPredictor = Pandas_Market_Predictor(df)
+  
+  # Predict Trend
+  TREND = MyMarketPredictor.Trend_Detection(["Indicator1","Indicator2"],10)
+  
+  #Printing the result
+  print("Buy Trend :",TREND['BUY'])
+  print("Sell Trend :",TREND['SELL'])
+  
+````
 
