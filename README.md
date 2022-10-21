@@ -33,3 +33,9 @@ You can build your data set by using Pandas-TA lib : https://github.com/twopirll
 
 
 For installation run :
+
+```
+pip install Pandas-Market-Predictor
+```
+
+
