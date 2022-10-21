@@ -71,6 +71,6 @@ if __name__ == "__main__" :
   TREND = MyMarketPredictor.Trend_Detection(["Indicator1","Indicator2"],10)
   print("Buy Trend :",TREND['BUY'])
   print("Sell Trend :",TREND['SELL'])
-  Level = Support_Resistance_Estimation_Tool(["Indicator1","Indicator2"])
+  Level = MyMarketPredictor.Support_Resistance_Estimation_Tool(["Indicator1","Indicator2"])
   print("Support Level :",Level['Support'])
   print(" Resistance Level :",Level['Resistance'])
