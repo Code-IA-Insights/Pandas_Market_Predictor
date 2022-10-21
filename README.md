@@ -29,4 +29,7 @@ A sample Data Set should be :
 |0.9363|0.93764|0.93566|0.93666|23461.0|0.936477396836001|0.9365549667551604|
 |0.93666|0.93798|0.93561|0.9372400000000001|26907.0|0.9367315978906674|0.936679518254222|
 
+You can build your data set by using Pandas-TA lib : https://github.com/twopirllc/pandas-ta
+
+
 For installation run :
