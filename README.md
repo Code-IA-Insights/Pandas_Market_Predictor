@@ -151,3 +151,12 @@ The Stop Loss Level for down Trend is 147.7088775041822 for 0.3333333333333333 R
 The Take Profit Level for up Trend is 147.06701489093487 for 0.6666666666666667 Trade_Efficiency_Factor
 The Take Profit Level for down Trend is 147.06701489093487 for 0.6666666666666667 Trade_Efficiency_Factor
 ```
+
+---
+## Support
+
+You can ask questions and join the development discussion:
+
+- [Facebook page](https://www.facebook.com/globalanalysistech) .
+
+---
