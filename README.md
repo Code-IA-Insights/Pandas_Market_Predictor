@@ -64,6 +64,9 @@ if __name__ == "__main__" :
   # Predict Trend
   TREND = MyMarketPredictor.Trend_Detection(["Indicator1","Indicator2"],10)
   
+  # 10 is the percentage of standard Deviation to detect
+  print(MyMarketPredictor.PERCENT_STD) # Print the value of standard deviation percentage
+  
   #Printing the result
   print("Buy Trend :",TREND['BUY'])
   print("Sell Trend :",TREND['SELL'])
@@ -82,7 +85,10 @@ Sell Trend : 0
 ### II.The Support Resistance Estimation Tool
 
 The Support Resistance Estimation Tool is as his name indicate permit to estimate the Low and High of an asset
-
 The question is : What is the standard deviation for an up or down trend given the level of indicator that we have for the current period ?
 
-
+````python
+  Level = MyMarketPredictor.Support_Resistance_Estimation_Tool(Indicators)
+  print("Support Level :",Level['Support'])
+  print("Resistance Level :",Level['Resistance'])
+````
