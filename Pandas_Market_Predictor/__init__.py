@@ -4,9 +4,10 @@ import numpy as np
 
 if __name__ == "__main__" :
   
-  dataset = pd.read_csv('dataset.csv')
-  MyMarketPredictor = Pandas_Market_Predictor(dataset)
-  TREND = MyMarketPredictor.Trend_Detection(["INDICATOR1","INDICATOR2"],10)
+  df = pd.read_csv('dataset.csv')
+  df = df.dropna(axis=0)
+  MyMarketPredictor = Pandas_Market_Predictor(df)
+  TREND = MyMarketPredictor.Trend_Detection(["Indicator1","Indicator2"],10)
   print("Buy Trend :",TREND['BUY'])
   print("Sell Trend :",TREND['SELL'])
   
