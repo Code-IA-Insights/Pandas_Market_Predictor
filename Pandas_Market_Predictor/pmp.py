@@ -1,4 +1,5 @@
 from Artificial_Neural_Network_Classifier import artificialneuralnetwork_classifier as ANNC
+from Awesome_Linear_Regression import linearregression as LR
 import pandas as pd
 import numpy as np
 
@@ -35,7 +36,28 @@ class Pandas_Market_Predictor :
       
       }
     
-   def Support_Resistance_Estimation_Tool(self):
+   def Support_Resistance_Estimation_Tool(self,indicator_list):
+    
+    x = np.matrix(self.dataset.iloc[1:-1 , :][indicator_list].to_numpy())
+    df['support_distance'] = df['Close'].iloc[:-1] - df['Low'].iloc[1:].values
+    df['resistance_distance'] = df['High'].iloc[1:].values - df['Close'].iloc[:-1]
+    
+    y1 = np.matrix(self.dataset.iloc[1:-1 , :][['support_distance']].to_numpy())
+    y2 = np.matrix(self.dataset.iloc[1:-1 , :][['resistance_distance']].to_numpy()) 
+    
+    Lr_support = LR(x,y1)
+    Lr_resistance = LR(x,y2)
+    
+    SIGNAL = np.matrix( self.dataset.tail(1)[indicator_list].to_numpy() )
+    
+    S = self.dataset.tail(1)['Close'] - Lr_support.predict(SIGNAL)
+    R = self.dataset.tail(1)['Close'] + Lr_resistance.predict(SIGNAL)
+    
+    return {
+      "Support" :  S,
+      "Resistance" : R
+    }
+    
     
     
       
@@ -49,3 +71,6 @@ if __name__ == "__main__" :
   TREND = MyMarketPredictor.Trend_Detection(["Indicator1","Indicator2"],10)
   print("Buy Trend :",TREND['BUY'])
   print("Sell Trend :",TREND['SELL'])
+  Level = Support_Resistance_Estimation_Tool(["Indicator1","Indicator2"])
+  print("Support Level :",Level['Support'])
+  print(" Resistance Level :",Level['Resistance'])
