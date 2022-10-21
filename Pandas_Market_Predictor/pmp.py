@@ -16,7 +16,7 @@ class Pandas_Market_Predictor :
       self.dataset['sell'] = (deriv < (-1 * GAMA)) * 1
       
       # Train the model
-      print(self.dataset)
+      
       x = np.matrix(self.dataset.iloc[1:-1 , :][indicator_list].to_numpy())
       y1 = np.matrix(self.dataset.iloc[1:-1 , :][['buy']].to_numpy())
       y2 = np.matrix(self.dataset.iloc[1:-1 , :][['sell']].to_numpy())
