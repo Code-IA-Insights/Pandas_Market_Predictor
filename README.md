@@ -42,6 +42,8 @@ pip install Pandas-Market-Predictor
 
 ### I.Trend Detection
 
+The trend detection purpose is to help you find the most probable Future Market Trend :
+
 ````python
 
 from Pandas_Market_Predictor import Pandas_Market_Predictor
