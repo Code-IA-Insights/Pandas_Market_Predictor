@@ -65,9 +65,9 @@ class Pandas_Market_Predictor :
     
     DEVIATION = R - S
     if Trend == "UP" :
-      STOP_LOSS = R - (DEVIATION * RISK_REWARD_RATIO)
+      STOP_LOSS = S - (DEVIATION * RISK_REWARD_RATIO)
     if Trend == "DOWN" :
-      STOP_LOSS = S + (DEVIATION * RISK_REWARD_RATIO)
+      STOP_LOSS = R + (DEVIATION * RISK_REWARD_RATIO)
     
     return STOP_LOSS
     
