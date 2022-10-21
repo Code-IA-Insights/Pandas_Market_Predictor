@@ -101,3 +101,6 @@ Support Level : 146.42515227768754
 Resistance Level : 147.38794619755853
 
 ```
+#### UPTREND EXEMPLE
+
+![Pandas Market Predictor UP TREND EXEMPLE ](https://github.com/somkietacode/Pandas_Market_Predictor/blob/main/image/UPTREND.png?raw=true)
