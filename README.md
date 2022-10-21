@@ -62,7 +62,8 @@ if __name__ == "__main__" :
   MyMarketPredictor = Pandas_Market_Predictor(df)
   
   # Predict Trend
-  TREND = MyMarketPredictor.Trend_Detection(["Indicator1","Indicator2"],10)
+  Indicators = ["Indicator1","Indicator2"]
+  TREND = MyMarketPredictor.Trend_Detection(Indicators,10)
   
   # 10 is the percentage of standard Deviation to detect
   print(MyMarketPredictor.PERCENT_STD) # Print the value of standard deviation percentage
