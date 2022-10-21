@@ -9,10 +9,10 @@ class Pandas_Market_Predictor :
     
     self.dataset = dataset
     
-  def Trend_Detection(indicator_list,STD_Quotient):
+  def Trend_Detection(self,indicator_list,STD_Quotient):
       
       GAMA = dataset.std()['Close'] / STD_Quotient
-      deriv = dataset['close'].iloc[1:] - dataset['close'].iloc[:-1].values
+      deriv = dataset['Close'].iloc[1:] - dataset['Close'].iloc[:-1].values
       dataset['buy'] = (deriv > GAMA) * 1
       dataset['sell'] = (deriv < (-1 * GAMA)) * 1
       
@@ -21,8 +21,8 @@ class Pandas_Market_Predictor :
       SIGNALS = np.matrix(dataset[indicator_list].to_numpy())
       SHALLBUY = np.matrix(dataset['buy'].to_numpy())
       SHALLSELL = np.matrix(dataset['sell'].to_numpy())
-      NEURONES_BUY = ANNC.artificialneuralnetwork_classifier(SIGNALS,SHALLBUY)
-      NEURONES_SELL = ANNC.artificialneuralnetwork_classifier(SIGNALS,SHALLSELL)
+      NEURONES_BUY = ANNC(SIGNALS,SHALLBUY)
+      NEURONES_SELL = ANNC(SIGNALS,SHALLSELL)
       
       # Return Prediction
       
@@ -35,8 +35,12 @@ class Pandas_Market_Predictor :
       
       }
       
-      
-      
-      
-    
+
+
+if __name__ == "__main__" :
   
+  dataset = pd.read_csv('dataset.csv')
+  MyMarketPredictor = Pandas_Market_Predictor(dataset)
+  TREND = MyMarketPredictor.Trend_Detection(["Indicator1","Indicator2"],10)
+  print("Buy Trend :",TREND['BUY'])
+  print("Sell Trend :",TREND['SELL'])
