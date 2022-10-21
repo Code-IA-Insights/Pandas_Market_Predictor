@@ -138,3 +138,11 @@ The Stop Loss Level for down Trend is 147.7088775041822 for 0.3333333333333333 R
 ```
 
 #### 2. Determine at witch price to exit ?
+
+````python
+  Trade_Efficiency_Factor = 1 - RISK_REWARD_RATIO
+  Take_Profit_Up = MyMarketPredictor.Take_Profit_CALCULATOR("UP",S,R,Trade_Efficiency_Factor)
+  Take_Profit_Down = MyMarketPredictor.Take_Profit_CALCULATOR("UP",S,R,Trade_Efficiency_Factor)
+  print("The Take Profit Level for up Trend is", Take_Profit_Up , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
+  print("The Take Profit Level for down Trend is", Take_Profit_Down , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
+````
