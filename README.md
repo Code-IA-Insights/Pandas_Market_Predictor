@@ -114,4 +114,19 @@ Risk is about 3 thing :
 
 #### 1. Determine at witch price your setup is invalide ?
 
-
+````python
+  
+  # Risk Reward Ratio 1 / 3 mean i need to won 1 trade over 3 for being profitable
+  
+  RISK_REWARD_RATIO = 1 / 3
+  
+  # Stop Loss Calculation Exemple for Up & Down Trend
+  
+  Stop_Loss_Up = MyMarketPredictor.STOP_LOSS_CALCULATOR("UP",Level['Support'],Level['Resistance'],RISK_REWARD_RATIO ) # For Up Trend
+  Stop_Loss_Down = MyMarketPredictor.STOP_LOSS_CALCULATOR("DOWN",Level['Support'],Level['Resistance'],RISK_REWARD_RATIO ) # For Up Down
+  
+  # Printing Result
+  
+  print("The Stop Loss Level for up Trend is", Stop_Loss_Up , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
+  print("The Stop Loss Level for down Trend is", Stop_Loss_Down , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
+````
