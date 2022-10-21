@@ -104,8 +104,8 @@ if __name__ == "__main__" :
   print("The Stop Loss Level for down Trend is", Stop_Loss_Down , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
 
   Trade_Efficiency_Factor = 9/10
-  Take_Profit_Up = Take_Profit_CALCULATOR("UP",S,R,Trade_Efficiency_Factor)
-  Take_Profit_Down = Take_Profit_CALCULATOR("UP",S,R,Trade_Efficiency_Factor)
+  Take_Profit_Up = MyMarketPredictor.Take_Profit_CALCULATOR("UP",S,R,Trade_Efficiency_Factor)
+  Take_Profit_Down = MyMarketPredictor.Take_Profit_CALCULATOR("UP",S,R,Trade_Efficiency_Factor)
   print("The Take Profit Level for up Trend is", Take_Profit_Up , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
   print("The Take Profit Level for down Trend is", Take_Profit_Down , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
       
