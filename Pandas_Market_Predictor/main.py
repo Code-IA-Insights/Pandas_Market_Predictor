@@ -8,9 +8,9 @@ class Pandas_Market_Predictor :
     
     self.dataset = dataset
     
-    def Trend_Detection():
+    def Trend_Detection(incator_list,STD_Quotient):
       
-      GAMA = dataset.std()['Close'] / 10
+      GAMA = dataset.std()['Close'] / STD_Quotient
       deriv = dataset['close'].iloc[1:] - dataset['close'].iloc[:-1].values
       dataset['buy'] = (deriv > GAMA) * 1
       dataset['sell'] = (deriv < (-1 * GAMA)) * 1
