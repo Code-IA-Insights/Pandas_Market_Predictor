@@ -130,3 +130,9 @@ Risk is about 3 thing :
   print("The Stop Loss Level for up Trend is", Stop_Loss_Up , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
   print("The Stop Loss Level for down Trend is", Stop_Loss_Down , "for",RISK_REWARD_RATIO ,"RISK_REWARD_RATIO" )
 ````
+
+```console
+The Stop Loss Level for up Trend is 146.10422097106388 for 0.3333333333333333 RISK_REWARD_RATIO
+The Stop Loss Level for down Trend is 147.7088775041822 for 0.3333333333333333 RISK_REWARD_RATIO
+
+```
