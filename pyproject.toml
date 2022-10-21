@@ -21,8 +21,8 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/somkietacode/Awesome_Linear_Regression"
-"Bug Tracker" = "https://github.com/somkietacode/Awesome_Linear_Regression/issues"
+"Homepage" = "https://github.com/somkietacode/Pandas_Market_Predictor"
+"Bug Tracker" = "https://github.com/somkietacode/Pandas_Market_Predictor/issues"
 
 [build-system]
 requires = ["setuptools"]
