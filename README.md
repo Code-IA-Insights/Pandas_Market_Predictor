@@ -40,6 +40,6 @@ pip install Pandas-Market-Predictor
 
 ## About Feature
 
-### Trend Detection
+### I.Trend Detection
 
 
