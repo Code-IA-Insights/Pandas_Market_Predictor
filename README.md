@@ -93,3 +93,11 @@ The question is : What is the standard deviation for an up or down trend given t
   print("Support Level :",Level['Support'])
   print("Resistance Level :",Level['Resistance'])
 ````
+
+Result :
+
+```console
+Support Level : 146.42515227768754
+Resistance Level : 147.38794619755853
+
+```
