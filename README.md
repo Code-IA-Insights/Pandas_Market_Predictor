@@ -110,6 +110,8 @@ Resistance Level : 147.38794619755853
 Even if you make very good prediction and having right 99% of time. The 1% Risk could append a day and reduce all your profit to néant so you
 need to have a good risk reward management.
 
+![Pandas Market Predictor UP TREND END EXEMPLE ](image/END.png)
+
 Risk is about 2 things :
 
 #### 1. Determine at witch price your setup is invalide ?
