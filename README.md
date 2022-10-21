@@ -136,3 +136,5 @@ The Stop Loss Level for up Trend is 146.10422097106388 for 0.3333333333333333 RI
 The Stop Loss Level for down Trend is 147.7088775041822 for 0.3333333333333333 RISK_REWARD_RATIO
 
 ```
+
+#### 2. Determine at witch price to exit ?
