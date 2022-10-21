@@ -83,5 +83,6 @@ Sell Trend : 0
 
 The Support Resistance Estimation Tool is as his name indicate permit to estimate the Low and High of an asset
 
+The question is : What is the standard deviation for an up or down trend given the level of indicator that we have for the current period ?
 
 
