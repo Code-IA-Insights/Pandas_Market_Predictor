@@ -38,4 +38,8 @@ For installation run :
 pip install Pandas-Market-Predictor
 ```
 
+## About Feature
+
+### Trend Detection
+
 
