@@ -34,6 +34,10 @@ class Pandas_Market_Predictor :
         "SELL" : int(NEURONES_SELL.predict(SIGNAL))
       
       }
+    
+   def Support_Resistance_Estimation_Tool(self):
+    
+    
       
 
 
