@@ -79,3 +79,9 @@ Sell Trend : 0
 
 ```
 
+### II.The Support Resistance Estimation Tool
+
+The Support Resistance Estimation Tool is as his name indicate permit to estimate the Low and High of an asset
+
+
+
