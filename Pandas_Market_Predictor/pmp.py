@@ -1,5 +1,5 @@
 from Artificial_Neural_Network_Classifier import artificialneuralnetwork_classifier as ANNC
-from Awesome_Linear_Regression import linearregression as LR
+from Auto_Gradient_Boosting import AGB
 import pandas as pd
 import numpy as np
 
@@ -45,10 +45,8 @@ class Pandas_Market_Predictor :
     y1 = np.matrix(self.dataset.iloc[1:-1 , :][['support_distance']].to_numpy())
     y2 = np.matrix(self.dataset.iloc[1:-1 , :][['resistance_distance']].to_numpy()) 
     
-    Lr_support = LR(x,y1)
-    BetaS, rssS = Lr_support.leastsquare()
-    Lr_resistance = LR(x,y2)
-    BetaR, rssR = Lr_resistance.leastsquare()
+    Lr_support = AGB(x,y1,0.001)
+    Lr_resistance = AGB(x,y2,0.001)
     
     SIGNAL = np.matrix( self.dataset.tail(1)[indicator_list].to_numpy() )
     
