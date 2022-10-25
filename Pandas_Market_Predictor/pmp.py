@@ -18,9 +18,9 @@ class Pandas_Market_Predictor :
       
       # Train the model
       
-      x = np.matrix(self.dataset.iloc[1:-1 , :][indicator_list].to_numpy() , dtype=np.float16)
-      y1 = np.matrix(self.dataset.iloc[1:-1 , :][['buy']].to_numpy() , dtype=np.float16 )
-      y2 = np.matrix(self.dataset.iloc[1:-1 , :][['sell']].to_numpy(), dtype=np.float16)
+      x = np.matrix(self.dataset.iloc[1:-1 , :][indicator_list].to_numpy() , dtype=np.float32)
+      y1 = np.matrix(self.dataset.iloc[1:-1 , :][['buy']].to_numpy() , dtype=np.float32 )
+      y2 = np.matrix(self.dataset.iloc[1:-1 , :][['sell']].to_numpy(), dtype=np.float32)
       NEURONES_BUY = ANNC(x,y1)
       NEURONES_SELL = ANNC(x,y2)
       
@@ -38,17 +38,17 @@ class Pandas_Market_Predictor :
 
   def Support_Resistance_Estimation_Tool(self,indicator_list):
     
-    x = np.matrix(self.dataset.iloc[1:-1 , :][indicator_list].to_numpy(),dtype=np.float16)
+    x = np.matrix(self.dataset.iloc[1:-1 , :][indicator_list].to_numpy(),dtype=np.float32)
     self.dataset['support_distance'] = self.dataset['Close'].iloc[:-1] - self.dataset['Low'].iloc[1:].values
     self.dataset['resistance_distance'] = self.dataset['High'].iloc[1:].values - self.dataset['Close'].iloc[:-1]
     
-    y1 = np.matrix(self.dataset.iloc[1:-1 , :][['support_distance']].to_numpy(), dtype=np.float16)
-    y2 = np.matrix(self.dataset.iloc[1:-1 , :][['resistance_distance']].to_numpy(), dtype=np.float16) 
+    y1 = np.matrix(self.dataset.iloc[1:-1 , :][['support_distance']].to_numpy(), dtype=np.float32)
+    y2 = np.matrix(self.dataset.iloc[1:-1 , :][['resistance_distance']].to_numpy(), dtype=np.float32) 
     
     Lr_support = AGB(x,y1,0.01)
     Lr_resistance = AGB(x,y2,0.01)
     
-    SIGNAL = np.matrix( self.dataset.tail(1)[indicator_list].to_numpy() , dtype=np.float16)
+    SIGNAL = np.matrix( self.dataset.tail(1)[indicator_list].to_numpy() , dtype=np.float32)
     
     S = self.dataset.tail(1)['Close'].values[0] - Lr_support.predict(SIGNAL)
     R = self.dataset.tail(1)['Close'].values[0] + Lr_resistance.predict(SIGNAL)
