@@ -45,8 +45,8 @@ class Pandas_Market_Predictor :
     y1 = np.matrix(self.dataset.iloc[1:-1 , :][['support_distance']].to_numpy())
     y2 = np.matrix(self.dataset.iloc[1:-1 , :][['resistance_distance']].to_numpy()) 
     
-    Lr_support = AGB(x,y1,0.001)
-    Lr_resistance = AGB(x,y2,0.001)
+    Lr_support = AGB(x,y1,0.01)
+    Lr_resistance = AGB(x,y2,0.01)
     
     SIGNAL = np.matrix( self.dataset.tail(1)[indicator_list].to_numpy() )
     
