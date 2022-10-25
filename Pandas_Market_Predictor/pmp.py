@@ -18,9 +18,9 @@ class Pandas_Market_Predictor :
       
       # Train the model
       
-      x = np.matrix(self.dataset.iloc[1:-1 , :][indicator_list].to_numpy() , dtype=np.float32)
-      y1 = np.matrix(self.dataset.iloc[1:-1 , :][['buy']].to_numpy() , dtype=np.float32 )
-      y2 = np.matrix(self.dataset.iloc[1:-1 , :][['sell']].to_numpy(), dtype=np.float32)
+      x = np.matrix(self.dataset.iloc[1:-1 , :][indicator_list].to_numpy() , dtype=np.float64)
+      y1 = np.matrix(self.dataset.iloc[1:-1 , :][['buy']].to_numpy() , dtype=np.int32 )
+      y2 = np.matrix(self.dataset.iloc[1:-1 , :][['sell']].to_numpy(), dtype=np.int32)
       NEURONES_BUY = ANNC(x,y1)
       NEURONES_SELL = ANNC(x,y2)
       
@@ -48,7 +48,7 @@ class Pandas_Market_Predictor :
     Lr_support = AGB(x,y1,0.01)
     Lr_resistance = AGB(x,y2,0.01)
     
-    SIGNAL = np.matrix( self.dataset.tail(1)[indicator_list].to_numpy() , dtype=np.float32)
+    SIGNAL = np.matrix( self.dataset.tail(1)[indicator_list].to_numpy() , dtype=np.float64)
     
     S = self.dataset.tail(1)['Close'].values[0] - Lr_support.predict(SIGNAL)
     R = self.dataset.tail(1)['Close'].values[0] + Lr_resistance.predict(SIGNAL)
@@ -107,5 +107,3 @@ if __name__ == "__main__" :
   print("The Take Profit Level for up Trend is", Take_Profit_Up , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
   print("The Take Profit Level for down Trend is", Take_Profit_Down , "for",Trade_Efficiency_Factor ,"Trade_Efficiency_Factor" )
       
-    
-  
