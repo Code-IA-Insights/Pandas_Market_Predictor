@@ -64,7 +64,7 @@ if __name__ == "__main__" :
   
   # Predict Trend
   Indicators = ["Indicator1","Indicator2"]
-  TREND = MyMarketPredictor.Trend_Detection(Indicators,20)
+  TREND = MyMarketPredictor.Trend_Detection(Indicators,50)
   
   
   #Printing the result
