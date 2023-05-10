@@ -154,12 +154,14 @@ The Take Profit Level for down Trend is 147.06701489093487 for 0.666666666666666
 ```
 
 ---
-## Get the premium version
+## Test the premium version all yahoo symbole intagrate
 
 
-https://user-images.githubusercontent.com/108131461/237000267-a99c15f2-4c85-44f8-9655-970c26ea4699.mp4
+https://github.com/somkietacode/Pandas_Market_Predictor/assets/108131461/013eabca-1652-4e51-8085-7090e7de93b2
 
-Join us on telegram : https://web.telegram.org/k/#-1983834679
+
+
+Talk to the bot : https://web.telegram.org/k/#@somkietacodes_bot
 
 ## Support
 
