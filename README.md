@@ -159,6 +159,7 @@ The Take Profit Level for down Trend is 147.06701489093487 for 0.666666666666666
 
 https://user-images.githubusercontent.com/108131461/237000267-a99c15f2-4c85-44f8-9655-970c26ea4699.mp4
 
+Join us on telegram : https://web.telegram.org/k/#-1983834679
 
 ## Support
 
