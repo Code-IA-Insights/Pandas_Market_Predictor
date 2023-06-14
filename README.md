@@ -161,8 +161,7 @@ https://github.com/somkietacode/Pandas_Market_Predictor/assets/108131461/013eabc
 
 
 
-Talk to the bot dayli : https://web.telegram.org/k/#@somkietacodes_bot
-Talk to the bot hourly : https://web.telegram.org/k/#@somkieta_codes_1h_bot
+Receive free premium signal : https://t.me/aidriventraderouaga
 
 ## Support
 
