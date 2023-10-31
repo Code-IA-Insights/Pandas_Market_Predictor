@@ -6,8 +6,11 @@ package manager release: ![gem](https://img.shields.io/badge/gem-2.2.0-blue)
 status of third-party dependencies: ![dependencies](https://img.shields.io/badge/dependencies-out%20of%20date-orange)
 
 static code analysis grade: ![codacy](https://img.shields.io/badge/codacy-B-green)
+amount of [Liberapay](https://liberapay.com/) donations per week: ![receives](https://img.shields.io/badge/receives-2.00%20USD%2Fweek-yellow)
 
 ![Pandas Market Predictor](https://github.com/somkietacode/Pandas_Market_Predictor/blob/main/image/pmp.png?raw=true)
+
+
 
 Pandas Market Predictor, is a deep learning API written in Python on top of Panda that helping you predict future price (low and min), trend of Financial market assets.
 
