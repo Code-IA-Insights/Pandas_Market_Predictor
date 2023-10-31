@@ -1,6 +1,6 @@
 # Pandas Market Predictor
 
-![pipy download](https://img.shields.io/pypi/dm/Pandas-Market-Predictor)
+Pipy Download : ![pipy download](https://img.shields.io/pypi/dm/Pandas-Market-Predictor)
 
 ![Pandas Market Predictor](https://github.com/somkietacode/Pandas_Market_Predictor/blob/main/image/pmp.png?raw=true)
 
