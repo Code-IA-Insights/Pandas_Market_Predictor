@@ -1,5 +1,5 @@
 # Pandas Market Predictor
-![GitHub All Releases](https://img.shields.io/github/downloads/lewdev/hw-gen/total)
+code coverage percentage: ![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)
 ![Pandas Market Predictor](https://github.com/somkietacode/Pandas_Market_Predictor/blob/main/image/pmp.png?raw=true)
 
 Pandas Market Predictor, is a deep learning API written in Python on top of Panda that helping you predict future price (low and min), trend of Financial market assets.
